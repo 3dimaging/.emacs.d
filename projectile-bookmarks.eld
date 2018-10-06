@@ -1,0 +1,1 @@
+("~/Downloads/camelyon16-arju/camelyon16/ops/")
