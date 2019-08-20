@@ -1,4 +1,4 @@
-(setq ring-bell-function 'ignore)
+(setq ring-bell-function 'ignore) 
 
 (global-linum-mode t)
 (global-auto-revert-mode t)

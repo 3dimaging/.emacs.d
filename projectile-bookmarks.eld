@@ -1,1 +1,1 @@
-("~/Downloads/camelyon16-arju/camelyon16/ops/")
+("~/Downloads/camelyon16-grand-challenge-master/results/" "~/Downloads/camelyon16-grand-challenge-master/camelyon16/")
