@@ -1,1 +1,1 @@
-("~/Downloads/camelyon16-grand-challenge-master/results/" "~/Downloads/camelyon16-grand-challenge-master/camelyon16/")
+("~/DeepLearningCamelyon/" "~/.emacs.d/")
