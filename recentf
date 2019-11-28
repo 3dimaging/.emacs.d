@@ -22,7 +22,8 @@
         "/Users/weizheli/.emacs.d/.cask/26.1/elpa/auctex-latexmk-20170618.1636/auctex-latexmk-autoloads.el"
         "/Users/weizheli/.emacs.d/.cask/26.1/elpa/web-mode-20190625.1951/web-mode-autoloads.el"
         "/Users/weizheli/.emacs.d/.cask/26.1/elpa/solarized-theme-20190809.1202/solarized-theme-autoloads.el"
-        ))
+
+       ))
 
 (setq recentf-filter-changer-current 'nil)
 
