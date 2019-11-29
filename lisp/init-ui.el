@@ -6,18 +6,44 @@
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 (window-numbering-mode 1)
 (require 'powerline)
-;; (powerline-default-theme)
+(powerline-default-theme)
 ;; (require 'powerline-evil)
-(load-theme 'nimbus t)
+(load-theme 'moe-dark t)
+;; (load-theme 'nimbus t)
 ;; (load-theme 'leuven t)
 
 ;;(set-face-background 'highlight-indentation-face "#e3e3d3")
 ;;(set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
+(require 'beacon)
+(beacon-mode 1)
+(setq beacon-blink-delay '0.2)
+(setq beacon-blink-when-focused 't)
+(setq beacon-dont-blink-commands 'nil)
+(setq beacon-push-mark '1)
+(setq beacon-color '1)
+
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+;; Set the title
+(setq dashboard-banner-logo-title "Welcome to Emacs!")
+;; Set the banner
+(setq dashboard-startup-banner 'logo)
+;; Value can be
+;; 'official which displays the official emacs logo
+;; 'logo which displays an alternative emacs logo
+;; 1, 2 or 3 which displays one of the text banners
+;; "path/to/your/image.png" which displays whatever image you would prefer
+
+;; Content is not centered by default. To center, set
+(setq dashboard-center-content t)
+
+(require 'awesome-tab)
+(awesome-tab-mode t)
 (case window-system
   ((x w32) (nyan-mode)))
 (nyan-mode t)
 (require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+(global-set-key [f9] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (require 'color-theme)
 ;;(require 'color-theme-solarized)
@@ -51,14 +77,19 @@
 
 ;; for powerline
 
-(set-face-attribute 'mode-line nil
-                    :foreground "Green"
-                    :background "Purple"
-                    :box nil)
-(setq powerline-arrow-shape 'triangle)
+;; (set-face-attribute 'mode-line nil
+                    ;; :foreground "Green"
+                    ;; :background "Purple"
+                    ;; :box nil)
+
+(require 'doom-modeline)
+(doom-modeline-mode 1)
+(setq doom-modeline-major-mode-color-icon t)
+(setq doom-modeline-buffer-state-icon t)
+;; (setq powerline-arrow-shape 'arrow14)
 
 
-(set-frame-parameter (selected-frame) 'alpha '(100 . 100))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 100))
 (add-to-list 'default-frame-alist '(alpha . (100 . 100)))
 
 ;; (set-face-attribute 'default nil :stipple “/Users/liw17/Documents/1552-4.jpg”) 
