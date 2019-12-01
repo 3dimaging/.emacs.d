@@ -51,8 +51,6 @@
 
 ;; ;;(setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOROOT"))
 
-(move-text-default-bindings)
-
 
 (require 'dired-imenu)
 
@@ -64,6 +62,20 @@
 (load-file custom-file)
 
 
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+
+;; enable narrowing commands
+(put 'narrow-to-region 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
+(put 'narrow-to-defun 'disabled nil)
+
+;; enabled change region case commands
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
+(global-set-key (kbd "C-x g") 'magit-status)
+
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-better-defaults)
@@ -74,6 +86,7 @@
 (require 'init-javascript)
 (require 'init-latex)
 (require 'init-org)
+(require 'init-edit)
 
 
 
