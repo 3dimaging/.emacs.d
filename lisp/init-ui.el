@@ -84,6 +84,8 @@
 
 (require 'doom-modeline)
 (doom-modeline-mode 1)
+(setq doom-modeline-height 20)
+(setq doom-modeline-bar-width 3)
 (setq doom-modeline-major-mode-color-icon t)
 (setq doom-modeline-buffer-state-icon t)
 ;; (setq powerline-arrow-shape 'arrow14)

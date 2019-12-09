@@ -5,7 +5,7 @@
 (move-text-default-bindings)
 ;; to show the column limit for example 78 character per line for python
 (require 'fill-column-indicator)
-
+(fci-mode 1)
 ;; to see the killing ring by M-y
 (require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)

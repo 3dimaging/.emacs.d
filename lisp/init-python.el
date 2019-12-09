@@ -30,9 +30,14 @@
 	    (set (make-local-variable 'company-backends) '((company-anaconda company-dabbrev-code)
 							   company-dabbrev)))
 	  )
-
+;; Inside a Python file, move the cursor to some function/method definition and hit C-c M-d (see gif demo below).
 (add-hook 'python-mode-hook (lambda ()
                               (require 'sphinx-doc)
-                              (sphinx-doc-mode t)))
-
+                              (sphinx-doc-mode t)
+			      (require 'python-docstring)
+			      (python-docstring-mode t)
+			      (auto-highlight-symbol-mode t)
+			      (fci-mode t)
+			      ))
+;; This is a minor-mode for Emacs for editing Python docstrings. It provides syntax highlighting for docstrings in both reStructuredText and Epydoc formats, as well as an override for the fill-paragraph function when editing such a docstring that will wrap things according to Python community convention.
 (provide 'init-python)

@@ -494,52 +494,52 @@ It requires `circe' or `erc' package."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-lsp-success
-  '((t (:inherit success :weight normal)))
+  '((t (:inherit success)))
   "Face for LSP success state."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-lsp-warning
-  '((t (:inherit warning :weight normal)))
+  '((t (:inherit warning)))
   "Face for LSP warning state."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-lsp-error
-  '((t (:inherit error :weight normal)))
+  '((t (:inherit error)))
   "Face for LSP error state."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-lsp-running
-  '((t (:inherit compilation-mode-line-run :weight normal)))
+  '((t (:inherit compilation-mode-line-run)))
   "Face for LSP running state."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-battery-charging
-  '((t (:inherit success :weight normal)))
+  '((t (:inherit success)))
   "Face for battery charging statues."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-battery-full
-  '((t (:inherit success :weight normal)))
+  '((t (:inherit success)))
   "Face for battery full statues."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-battery-normal
-  '((t (:inherit mode-line :weight normal)))
+  '((t (:inherit mode-line)))
   "Face for battery normal statues."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-battery-warning
-  '((t (:inherit warning :weight normal)))
+  '((t (:inherit warning)))
   "Face for battery warning statues."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-battery-critical
-  '((t (:inherit error :weight normal)))
+  '((t (:inherit error)))
   "Face for battery critical statues."
   :group 'doom-modeline-faces)
 
 (defface doom-modeline-battery-error
-  '((t (:inherit error :weight normal)))
+  '((t (:inherit error)))
   "Face for battery error statues."
   :group 'doom-modeline-faces)
 
