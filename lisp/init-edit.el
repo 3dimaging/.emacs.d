@@ -50,5 +50,7 @@
       helm-echo-input-in-header-line t
       helm-autoresize-max-height 0
       helm-autoresize-min-height 20)
-
+;; the following two key bindings are for fix-isearch package.
+(global-set-key (kbd "C-M-r") #'fix-isearch-backward)
+(global-set-key (kbd "C-M-s") #'fix-isearch-forward)
 (provide 'init-edit)

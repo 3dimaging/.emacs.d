@@ -40,4 +40,22 @@
 			      (fci-mode t)
 			      ))
 ;; This is a minor-mode for Emacs for editing Python docstrings. It provides syntax highlighting for docstrings in both reStructuredText and Epydoc formats, as well as an override for the fill-paragraph function when editing such a docstring that will wrap things according to Python community convention.
+
+
+;; here comes the indent-tools
+(require 'indent-tools)
+;; (global-set-key (kbd "C-c >") 'indent-tools-hydra/body)
+(add-hook 'python-mode-hook
+	  (lambda () (define-key python-mode-map (kbd "C-c >") 'indent-tools-hydra/body)))
+
+;; the following is elpygen to use yasnapit to insert function or classes
+
+(require 'elpygen)
+(define-key python-mode-map (kbd "C-c i") 'elpygen-implement)
+
+;; here is pyimport
+(require 'pyimport)
+(define-key python-mode-map (kbd "C-c C-i") #'pyimport-insert-missing)
+(define-key python-mode-map (kbd "C-c C-R") #'pyimport-remove-unused)
+
 (provide 'init-python)
