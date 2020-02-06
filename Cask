@@ -192,3 +192,4 @@
 (depends-on "with-editor")
 (depends-on "yasnippet")
 (depends-on "zoutline")
+(depends-on "ztree")

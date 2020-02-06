@@ -39,12 +39,15 @@
 
 (require 'awesome-tab)
 (awesome-tab-mode t)
+
 (case window-system
   ((x w32) (nyan-mode)))
 (nyan-mode t)
+
 (require 'neotree)
 (global-set-key [f9] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
 (require 'color-theme)
 ;;(require 'color-theme-solarized)
 (color-theme-initialize)
@@ -90,8 +93,8 @@
 (setq doom-modeline-buffer-state-icon t)
 ;; (setq powerline-arrow-shape 'arrow14)
 
-
-(set-frame-parameter (selected-frame) 'alpha '(95 . 100))
+;; set the transparency of Emacs
+(set-frame-parameter (selected-frame) 'alpha '(100 . 100))
 (add-to-list 'default-frame-alist '(alpha . (100 . 100)))
 
 ;; (set-face-attribute 'default nil :stipple “/Users/liw17/Documents/1552-4.jpg”) 
@@ -125,4 +128,5 @@
 ;; (load-theme 'monokai t)
 (require 'popwin)
 (popwin-mode t)
+
 (provide 'init-ui)

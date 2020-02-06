@@ -55,6 +55,7 @@
 
 ;; here is pyimport
 (require 'pyimport)
+(setq pyimport-pyflakes-path "/home/wli/env/bin/pyflakes")
 (define-key python-mode-map (kbd "C-c C-i") #'pyimport-insert-missing)
 (define-key python-mode-map (kbd "C-c C-R") #'pyimport-remove-unused)
 

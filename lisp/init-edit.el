@@ -50,7 +50,15 @@
       helm-echo-input-in-header-line t
       helm-autoresize-max-height 0
       helm-autoresize-min-height 20)
+
+
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
 ;; the following two key bindings are for fix-isearch package.
 (global-set-key (kbd "C-M-r") #'fix-isearch-backward)
 (global-set-key (kbd "C-M-s") #'fix-isearch-forward)
+;; the following for  adding "" by press v-i-m then S then "; to change use =cs then " then '
+(require 'evil-surround)
+(global-evil-surround-mode)
+;; Ztree for directories diff
+(require 'ztree)
 (provide 'init-edit)
