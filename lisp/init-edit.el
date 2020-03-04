@@ -9,6 +9,12 @@
 ;; to see the killing ring by M-y
 (require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)
+(setq kill-ring-max 100) 
+(setq x-select-enable-clipboard t) 
+(setq select-active-regions t) 
+(setq save-interprogram-paste-before-kill 1) 
+(setq yank-pop-change-selection t) 
+
 
 ;; auto-symbol highlight is installed to show all the same key words automatically
 ;; her is the manual one, just in case I need it.

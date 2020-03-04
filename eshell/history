@@ -66,3 +66,14 @@ cd ~/Documents/
 echo $PATH
 export PATH=/usr/local/lib/python3.6/site-packages:$PATH
 echo $PATH
+cd /raidb/wli/
+ls .
+cd HNM_1231_19_20/ 
+ls .
+cd Trained_Models/
+ls .
+cd no_noise_no_norm/
+ls .
+ls .
+cd Documents/
+ls .
