@@ -48,9 +48,9 @@
 (global-set-key [f9] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
-(require 'color-theme)
+;; (require 'color-theme)
 ;;(require 'color-theme-solarized)
-(color-theme-initialize)
+;; (color-theme-initialize)
 ;; set dark theme
 ;;(color-theme-solarized-dark)
 ;; set light theme
@@ -84,8 +84,27 @@
                     ;; :foreground "Green"
                     ;; :background "Purple"
                     ;; :box nil)
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-Iosvkem t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  
+  ;; Enable custom neotree theme (all-the-icons must be installed!)
+  (doom-themes-neotree-config)
+  ;; or for treemacs users
+  ;; (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+  ;; (doom-themes-treemacs-config)
+  
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
 
 (require 'doom-modeline)
+
 (doom-modeline-mode 1)
 (setq doom-modeline-height 20)
 (setq doom-modeline-bar-width 3)
