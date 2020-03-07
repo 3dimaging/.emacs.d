@@ -35,6 +35,9 @@
 ;; Finish - by pressing C-; again
 (require 'iedit)
 
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
 
 (setq helm-M-x-fuzzy-match t
       helm-mode-fuzzy-match t
