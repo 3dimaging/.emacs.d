@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "all-the-icons-ibuffer" "20200226.1810" "Display icons for all buffers in ibuffer" '((emacs "24.4") (all-the-icons "2.2.0")) :commit "1261417b58c614b5a41bede70e267eb9f036d36a" :keywords '("convenience" "icons" "ibuffer") :authors '(("Vincent Zhang" . "seagle0128@gmail.com")) :maintainer '("Vincent Zhang" . "seagle0128@gmail.com") :url "https://github.com/seagle0128/all-the-icons-ibuffer")

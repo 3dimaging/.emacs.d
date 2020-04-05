@@ -3,6 +3,7 @@
 (setq inhibit-splash-screen t)
 (setq-default cursor-type 'bar)
 (global-hl-line-mode t)
+;; (global-display-line-numbers-mode -1)
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 (window-numbering-mode 1)
 (require 'powerline)
@@ -39,15 +40,18 @@
 
 (require 'awesome-tab)
 (awesome-tab-mode t)
+
 (case window-system
   ((x w32) (nyan-mode)))
 (nyan-mode t)
+
 (require 'neotree)
 (global-set-key [f9] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-(require 'color-theme)
+
+;; (require 'color-theme)
 ;;(require 'color-theme-solarized)
-(color-theme-initialize)
+;; (color-theme-initialize)
 ;; set dark theme
 ;;(color-theme-solarized-dark)
 ;; set light theme
@@ -81,15 +85,36 @@
                     ;; :foreground "Green"
                     ;; :background "Purple"
                     ;; :box nil)
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-Iosvkem t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  
+  ;; Enable custom neotree theme (all-the-icons must be installed!)
+  (doom-themes-neotree-config)
+  ;; or for treemacs users
+  ;; (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+  ;; (doom-themes-treemacs-config)
+  
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
 
 (require 'doom-modeline)
+
 (doom-modeline-mode 1)
+(setq doom-modeline-height 20)
+(setq doom-modeline-bar-width 3)
 (setq doom-modeline-major-mode-color-icon t)
 (setq doom-modeline-buffer-state-icon t)
 ;; (setq powerline-arrow-shape 'arrow14)
 
-
-(set-frame-parameter (selected-frame) 'alpha '(95 . 100))
+;; set the transparency of Emacs
+(set-frame-parameter (selected-frame) 'alpha '(100 . 100))
 (add-to-list 'default-frame-alist '(alpha . (100 . 100)))
 
 ;; (set-face-attribute 'default nil :stipple “/Users/liw17/Documents/1552-4.jpg”) 
@@ -123,4 +148,46 @@
 ;; (load-theme 'monokai t)
 (require 'popwin)
 (popwin-mode t)
+
+
+(use-package all-the-icons-ivy
+  :init (add-hook 'after-init-hook 'all-the-icons-ivy-setup))
+
+
+(all-the-icons-ivy-setup)
+
+(require 'company-box)
+(add-hook 'company-mode-hook 'company-box-mode)
+
+(setq company-box-icons-lsp
+      `(( 1  . ,(all-the-icons-faicon "file-text-o" :v-adjust -0.0575))     ; Text
+        ( 2  . ,(all-the-icons-faicon "cube" :v-adjust -0.0575))            ; Method
+        ( 3  . ,(all-the-icons-faicon "cube" :v-adjust -0.0575))            ; Function
+        ( 4  . ,(all-the-icons-faicon "cube" :v-adjust -0.0575))            ; Constructor
+        ( 5  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Field
+        ( 6  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Variable
+        ( 7  . ,(all-the-icons-faicon "cog" :v-adjust -0.0575))             ; Class
+        ( 8  . ,(all-the-icons-faicon "cogs" :v-adjust -0.0575))            ; Interface
+        ( 9  . ,(all-the-icons-alltheicon "less"))                          ; Module
+        (10  . ,(all-the-icons-faicon "wrench" :v-adjust -0.0575))          ; Property
+        (11  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Unit
+        (12  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Value
+        (13  . ,(all-the-icons-material "content_copy" :v-adjust -0.2))     ; Enum
+        (14  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Keyword
+        (15  . ,(all-the-icons-material "content_paste" :v-adjust -0.2))    ; Snippet
+        (16  . ,(all-the-icons-material "palette" :v-adjust -0.2))          ; Color
+        (17  . ,(all-the-icons-faicon "file" :v-adjust -0.0575))            ; File
+        (18  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Reference
+        (19  . ,(all-the-icons-faicon "folder" :v-adjust -0.0575))          ; Folder
+        (20  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; EnumMember
+        (21  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Constant
+        (22  . ,(all-the-icons-faicon "cog" :v-adjust -0.0575))             ; Struct
+        (23  . ,(all-the-icons-faicon "bolt" :v-adjust -0.0575))            ; Event
+        (24  . ,(all-the-icons-faicon "tag" :v-adjust -0.0575))             ; Operator
+        (25  . ,(all-the-icons-faicon "cog" :v-adjust -0.0575))             ; TypeParameter
+        ))
+
+(setq company-box-icons-alist 'company-box-icons-all-the-icons)
+(display-time)
+
 (provide 'init-ui)

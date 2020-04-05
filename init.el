@@ -87,6 +87,8 @@
 (require 'init-latex)
 (require 'init-org)
 (require 'init-edit)
+(require 'init-company)
+(require 'init-cpp)
 
 
 

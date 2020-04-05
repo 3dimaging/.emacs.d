@@ -5,10 +5,16 @@
 (move-text-default-bindings)
 ;; to show the column limit for example 78 character per line for python
 (require 'fill-column-indicator)
-
+(fci-mode 1)
 ;; to see the killing ring by M-y
 (require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)
+(setq kill-ring-max 100) 
+(setq x-select-enable-clipboard t) 
+(setq select-active-regions t) 
+(setq save-interprogram-paste-before-kill 1) 
+(setq yank-pop-change-selection t) 
+
 
 ;; auto-symbol highlight is installed to show all the same key words automatically
 ;; her is the manual one, just in case I need it.
@@ -54,4 +60,14 @@
       helm-autoresize-max-height 0
       helm-autoresize-min-height 20)
 
+
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+;; the following two key bindings are for fix-isearch package.
+(global-set-key (kbd "C-M-r") #'fix-isearch-backward)
+(global-set-key (kbd "C-M-s") #'fix-isearch-forward)
+;; the following for  adding "" by press v-i-m then S then "; to change use =cs then " then '
+(require 'evil-surround)
+(global-evil-surround-mode)
+;; Ztree for directories diff
+(require 'ztree)
 (provide 'init-edit)
