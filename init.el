@@ -9,8 +9,7 @@
 (cask-initialize)    ; 类似于 package-initialize
 (require 'pallet)
 (pallet-mode t)      ; 激活 pallet, 在安装包时将 Cask 
-
-
+(require 'use-package)
 ;;(require 'ob-tangle)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 ;; (setq scimax-dir "~/scimax")
@@ -89,6 +88,4 @@
 (require 'init-edit)
 (require 'init-company)
 (require 'init-cpp)
-
-
 

@@ -1,3 +1,29 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/weizheli/.emacs.d/lisp/init-better-defaults.el" . 4196)
+(("/Volumes/LSBLIMAC/Laptop-backup-NIH-09-13-19/Documents/mortality-prediction.org" . 18634)
+ ("/Users/weizheli/Documents/mortality-prediction.tex" . 1571)
+ ("/Users/weizheli/.emacs.d/lisp/init-packages.el" . 2741)
+ ("/Volumes/LSBLIMAC/Laptop-backup-NIH-09-13-19/Documents/notes.org" . 8010)
+ ("/Users/weizheli/.emacs.d/.cask/26.1/elpa/projectile-20190626.1315/projectile.el" . 180020)
+ ("/Volumes/LSBLIMAC/Laptop-backup-NIH-09-13-19/Documents/mortality-prediction.tex" . 68131)
+ ("/Users/weizheli/.emacs.d/lisp/init-java.el" . 505)
+ ("/Users/weizheli/WSICS/WSICS/Main.cpp" . 17)
+ ("/Users/weizheli/WSICS/WSICS/Normalization/CLI.h" . 127)
+ ("/Users/weizheli/WSICS/WSICS/Normalization/WSICS_Algorithm.h" . 187)
+ ("/Users/weizheli/WSICS/WSICS/Normalization/PixelClassificationHE.h" . 241)
+ ("/Users/weizheli/WSICS/WSICS/HE_Staining/HE_Classifier.h" . 670)
+ ("/Users/weizheli/WSICS/WSICS/HE_Staining/MaskGeneration.h" . 243)
+ ("/Users/weizheli/WSICS/WSICS/"
+  (dired-filename . "/Users/weizheli/WSICS/WSICS/Main.cpp"))
+ ("/Users/weizheli/WSICS/"
+  (dired-filename . "/Users/weizheli/WSICS/WSICS"))
+ ("/Users/weizheli/Documents/java_test/java_01.java" . 106)
+ ("/Users/weizheli/Documents/java_test/"
+  (dired-filename . "/Users/weizheli/Documents/java_test/java_01.java"))
+ ("/Users/weizheli/Documents/"
+  (dired-filename . "/Users/weizheli/Documents/jq umms volunteer training certificate.pdf"))
+ ("/Users/weizheli/.emacs.d/lisp/"
+  (dired-filename . "/Users/weizheli/.emacs.d/lisp/.#init-edit.el"))
+ ("/Users/weizheli/.emacs.d/lisp/init-better-defaults.el" . 2173)
+ ("/Users/weizheli/.emacs.d/init.el" . 2120)
+ ("/Users/weizheli/.emacs.d/.cask/26.1/elpa/lsp-java-20200425.1842/lsp-java-autoloads.el" . 1392)
  ("/Users/weizheli/.emacs.d/.cask/26.1/elpa/lispy-20200425.1041/lispy-autoloads.el" . 3133))
