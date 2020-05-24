@@ -116,9 +116,9 @@
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-smart-open t)
-;; (projectile-mode +1)
-;;(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-;;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (require 'helm-mode)
 (require 'helm-config)
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
