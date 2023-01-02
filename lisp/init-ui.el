@@ -9,7 +9,7 @@
 (require 'powerline)
 (powerline-default-theme)
 ;; (require 'powerline-evil)
-(load-theme 'moe-dark t)
+;; (load-theme 'moe-dark t)
 ;; (load-theme 'nimbus t)
 ;; (load-theme 'leuven t)
 
@@ -37,6 +37,12 @@
 
 ;; Content is not centered by default. To center, set
 (setq dashboard-center-content t)
+(setq dashboard-items '((recents  . 5)
+                        (bookmarks . 5)
+                        (projects . 5)
+                        ;; (agenda . 5)
+                        ;; (registers . 5)
+			))
 
 (require 'awesome-tab)
 (awesome-tab-mode t)

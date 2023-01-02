@@ -3,12 +3,12 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;;(package-initialize)
 
 ;;(require 'cask "~/.cask/cask.el")
 ;;(cask-initialize)    ; 类似于 package-initialize
 ;;(require 'pallet)
-;;(pallet-mode t)      ; 激活 pallet, 在安装包时将 Cask 
+;;(pallet-mode t)      ; 激活 pallet, 在安装包时将 Cask
 ;;(require 'use-package)
 ;;(require 'ob-tangle)
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -89,5 +89,5 @@
 (require 'init-org)
 (require 'init-edit)
 (require 'init-company)
-(require 'init-cpp)
+;; (require 'init-cpp)
 

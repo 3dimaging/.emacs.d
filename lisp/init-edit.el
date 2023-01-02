@@ -2,7 +2,7 @@
 ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; move text
 ;; Meta-up move-text-up (line or active region)
 ;; Meta-down move-text-down (line or active region)
-(move-text-default-bindings)
+;;(move-text-default-bindings)
 ;; to show the column limit for example 78 character per line for python
 (require 'fill-column-indicator)
 (fci-mode 1)
@@ -66,7 +66,7 @@
 (global-set-key (kbd "C-M-r") #'fix-isearch-backward)
 (global-set-key (kbd "C-M-s") #'fix-isearch-forward)
 ;; the following for  adding "" by press v-i-m then S then "; to change use =cs then " then '
-(require 'evil-surround)
+;;(require 'evil-surround)
 (global-evil-surround-mode)
 ;; Ztree for directories diff
 (require 'ztree)

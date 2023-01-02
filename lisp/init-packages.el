@@ -42,6 +42,8 @@
 		powerline-evil
 		ivy
 		smartparens
+		use-package
+		lispy
 		;;pallet
 ;;		;; my own packages
                 solarized-theme
@@ -49,8 +51,9 @@
 		helm-gtags
 		ggtags
 ;;		;;for python
-		ein 
+		ein
 		elpy
+		elpygen
 		py-autopep8
 		websocket
 		request
@@ -60,7 +63,11 @@
 		request-deferred
 		smartrep
 		org
-		magit 
+		magit
+		projectile
+		ob-ipython
+		indent-tools
+		pyimport
 ;;		;;for latex
 		auctex
 		auctex-latexmk
@@ -68,7 +75,27 @@
 		company-auctex
 		cdlatex
 		latex-preview-pane
-;;		
+		latex-pretty-symbols
+		latex-unicode-math-mode
+		;;ui related
+		all-the-icons
+		all-the-icons-ivy
+		moe-theme
+		beacon
+		dashboard
+		nyan-mode
+		neotree
+		doom-themes
+		doom-modeline
+		company-box
+		ivy-posframe
+		;; efficient edit
+		fill-column-indicator
+		browse-kill-ring
+		highlight-symbol
+		multiple-cursors
+		evil-surround
+		ztree
                 ) )
 ;;
 (setq package-selected-packages my/packages)
@@ -121,7 +148,7 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (require 'helm-mode)
-(require 'helm-config)
+;;(require 'helm-config)
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
 ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
