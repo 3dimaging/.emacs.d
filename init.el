@@ -5,13 +5,15 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)    ; 类似于 package-initialize
-(require 'pallet)
-(pallet-mode t)      ; 激活 pallet, 在安装包时将 Cask 
-(require 'use-package)
+;;(require 'cask "~/.cask/cask.el")
+;;(cask-initialize)    ; 类似于 package-initialize
+;;(require 'pallet)
+;;(pallet-mode t)      ; 激活 pallet, 在安装包时将 Cask 
+;;(require 'use-package)
 ;;(require 'ob-tangle)
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
+;;(require 'use-package)
 ;; (setq scimax-dir "~/scimax")
 ;; (add-to-list 'load-path "~/scimax")
 ;; (require 'ob-ipython)
@@ -24,7 +26,7 @@
   (find-file "~/.emacs.d/init.el")
     )
 
-
+(global-set-key (kbd "C-x e") 'open-my-init-file)
 
 
 ;;(require 'smex) ; Not needed if you use package.el
@@ -44,14 +46,14 @@
 ;;(yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
-(which-key-mode 1)
+;;(which-key-mode 1)
 
 ;; ;;(electric-indent-mode 1)
 
 ;; ;;(setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOROOT"))
 
 
-(require 'dired-imenu)
+;;(require 'dired-imenu)
 
 ;; A quick major mode help with discover-my-major; The setup binds C-h h m to discover-my-major.
 (global-unset-key (kbd "C-h h"))        ; original "C-h h" displays "hello world" in different languages

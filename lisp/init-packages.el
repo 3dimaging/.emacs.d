@@ -1,93 +1,94 @@
 (require 'cl)
 
-;;(when (>= emacs-major-version 24)
-;;     (require 'package)
-;;     (package-initialize)
-;;     (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-;;     ;;(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-;;     ;;			      ("melpa" . "http://elpa.emacs-china.org/melpa/")))
-;;     )
+(when (>= emacs-major-version 24)
+     (require 'package)
+     (package-initialize)
+     (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+     (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+     (setq package-archives '(("gnu"   . "http://elpa.gnu.org/packages/")
+     			      ("melpa" . "https://melpa.org/packages/")))
+     )
 
 
 
  ;; Add Packages
-;; (defvar my/packages '(
-;;                company
-;;                hungry-delete
-;;                swiper
-;;                counsel
-;;                smartparens
-;;                js2-mode
-;;                nodejs-repl
-;;                exec-path-from-shell
-;;		popwin
-;;		reveal-in-osx-finder
-;;		web-mode
-;;		js2-refactor
-;;		expand-region
-;;		iedit
-;;		org-pomodoro
-;;		helm-ag 
-;;		flycheck
-;;		auto-yasnippet
-  ;;              monokai-theme
-;;		evil
-;;		evil-leader
-;;		window-numbering
-;;		evil-surround
-;;		evil-nerd-commenter
-;;		which-key
-;;		powerline
-;;		powerline-evil
-;;		ivy
-;;		smartparens
-;;		pallet
+ (defvar my/packages '(
+                company
+                hungry-delete
+                swiper
+                counsel
+                smartparens
+                js2-mode
+                nodejs-repl
+                exec-path-from-shell
+		popwin
+		reveal-in-osx-finder
+		web-mode
+		js2-refactor
+		expand-region
+		iedit
+		org-pomodoro
+		helm-ag 
+		flycheck
+		auto-yasnippet
+                monokai-theme
+		evil
+		evil-leader
+		window-numbering
+		evil-surround
+		evil-nerd-commenter
+		which-key
+		powerline
+		powerline-evil
+		ivy
+		smartparens
+		;;pallet
 ;;		;; my own packages
-;;                solarized-theme
-;;		helm
-;;		helm-gtags
-;;		ggtags
+                solarized-theme
+		helm
+		helm-gtags
+		ggtags
 ;;		;;for python
-;;		ein 
-;;		elpy
-;;		py-autopep8
-;;		websocket
-;;		request
-;;		dash
-;;		s
-;;		skewer-mode
-;;		request-deferred
-;;		smartrep
-;;		org
-;;		magit 
+		ein 
+		elpy
+		py-autopep8
+		websocket
+		request
+		dash
+		s
+		skewer-mode
+		request-deferred
+		smartrep
+		org
+		magit 
 ;;		;;for latex
-;;		auctex
-;;		auctex-latexmk
-;;		auctex-lua
-;;		company-auctex
-;;		cdlatex
-;;		latex-preview-pane
+		auctex
+		auctex-latexmk
+		auctex-lua
+		company-auctex
+		cdlatex
+		latex-preview-pane
 ;;		
-;;                ) "Default packages")
+                ) )
 ;;
-;; (setq package-selected-packages my/packages)
+(setq package-selected-packages my/packages)
 
-;; (defun my/packages-installed-p ()
-;;     (loop for pkg in my/packages
-;;           when (not (package-installed-p pkg)) do (return nil)
-;;           finally (return t)))
+ (defun my/packages-installed-p ()
+     (loop for pkg in my/packages
+           when (not (package-installed-p pkg)) do (return nil)
+           finally (return t)))
 
-;; (unless (my/packages-installed-p)
-;;     (message "%s" "Refreshing package database...")
-;;     (package-refresh-contents)
-;;     (dolist (pkg my/packages)
-;;       (when (not (package-installed-p pkg))
-;;         (package-install pkg))))
+ (unless (my/packages-installed-p)
+     (message "%s" "Refreshing package database...")
+     (package-refresh-contents)
+     (dolist (pkg my/packages)
+       (when (not (package-installed-p pkg))
+         (package-install pkg))))
 
 ;; Find Executable Path on OS X
-;;(setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOROOT"))
-;; (when (memq window-system '(mac ns))
-;;   (exec-path-from-shell-initialize))
+(setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOROOT"))
+ (when (memq window-system '(mac ns))
+   (exec-path-from-shell-initialize))
 
 ;;(global-hungry-delete-mode)
 (require 'smartparens-config)
