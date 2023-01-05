@@ -1,0 +1,2 @@
+;;; Generated package description from py-autopep8.el  -*- no-byte-compile: t -*-
+(define-package "py-autopep8" "20221230.1050" "Use autopep8 to beautify a Python buffer" '((emacs "26.1")) :commit "d4b9f650931d190f97358b7b332db41756d7a9a2" :authors '(("Friedrich Paetzk" . "f.paetzke@gmail.com")) :maintainer '("Friedrich Paetzk" . "f.paetzke@gmail.com") :keywords '("convenience") :url "https://codeberg.org/ideasman42/emacs-py-autopep8")
