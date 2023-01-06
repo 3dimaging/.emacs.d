@@ -12,91 +12,101 @@
 
 
  ;; Add Packages
- (defvar my/packages '(
-                company
-                hungry-delete
-                swiper
-                counsel
-                smartparens
-                js2-mode
-                nodejs-repl
-                exec-path-from-shell
-		popwin
-		reveal-in-osx-finder
-		web-mode
-		js2-refactor
-		expand-region
-		iedit
-		org-pomodoro
-		helm-ag 
-		flycheck
-		auto-yasnippet
-                monokai-theme
-		evil
-		evil-leader
-		window-numbering
-		evil-surround
-		evil-nerd-commenter
-		which-key
-		powerline
-		powerline-evil
-		ivy
-		smartparens
-		use-package
-		lispy
-		;;pallet
-;;		;; my own packages
-                solarized-theme
-		helm
-		helm-gtags
-		ggtags
-;;		;;for python
-		ein
-		elpy
-		elpygen
-		py-autopep8
-		websocket
-		request
-		dash
-		s
-		skewer-mode
-		request-deferred
-		smartrep
-		org
-		magit
-		projectile
-		ob-ipython
-		indent-tools
-		pyimport
-;;		;;for latex
-		auctex
-		auctex-latexmk
-		auctex-lua
-		company-auctex
-		cdlatex
-		latex-preview-pane
-		latex-pretty-symbols
-		latex-unicode-math-mode
-		;;ui related
-		all-the-icons
-		all-the-icons-ivy
-		moe-theme
-		beacon
-		dashboard
-		nyan-mode
-		neotree
-		doom-themes
-		doom-modeline
-		company-box
-		ivy-posframe
-		;; efficient edit
-		fill-column-indicator
-		browse-kill-ring
-		highlight-symbol
-		multiple-cursors
-		evil-surround
-		ztree
-                ) )
+(defvar my/packages '(
+		      ;; 0. Package 
+		      use-package
+		      ;; 1. Programming related
+		      ;; 1.0 general
+		      company  ;; text completion ; complete anything
+		      company-box
+		      ivy ;; another text completion from abo-abo
+		      counsel
+		      auto-yasnippet
+		      flycheck
+		      fill-column-indicator
+		      highlight-symbol
+		      projectile
+		      ;; 1.1 javascript and web
+		      js2-mode
+		      nodes-Real
+		      js2-refactor
+		      skewer-mode
+		      ;; 1.2 lisp
+		      lispy
+		      dash
+		      s
+		      ;; 1.3 python
+		      ein
+		      elpy
+		      elpygen
+		      py-autopep8
+		      request-deferred
+		      ob-ipython
+		      indent-tools
+		      pyimport
+		      ;; 1.4 latex
+		      auctex
+		      auctex-latexmk
+		      auctex-lua
+		      company-auctex
+		      cdlatex
+		      latex-preview-pane
+		      latex-pretty-symbols
+		      latex-unicode-math-mode
+		      ;; 1.5 org
+		      org
+		      org-pomodoro
+		      ;; 2. Text editing
+		      hungry-delete ;; delete more space
+		      smartparens  ;; automatically insert pairs
+		      expand-region  ;; Expand region increases the selected region by semantic units
+		      iedit ;; edit multple occurrences
+		      evil  ;; vim simulator
+		      evil-leader  ;; set leader key
+		      evil-surround
+		      evil-nerd-commenter
+		      brow-kill-ring
+		      multiple-cursors
+		      smartrep
+		      ;; 3. Text search
+		      swiper
+		      helm
+		      helm-ag
+		      occur
+		      ;; 4. Navigation
+		      ;; 4.1 window navigate
+		      window-numbering
+		      popwin
+		      ;; 4.2 buffer navigate
+		      ;; 4.3 text navigate
+		      ggtags
+		      Helm-gtags
+		      avy
+		      ;; 4.4 command navigate
+		      which-key
+		      ;; 5. UI
+		      molokai-theme
+		      solarized-theme
+		      moe-theme
+		      doom-theme
+		      doom-modeline
+		      powerline
+		      powerline-evil
+		      all-the-icons
+		      all-the-icons-ivy
+		      dashboard
+		      beacon
+		      nyan-mode
+		      neotree
+		      ivy-posframe
+		      awesome-tab
+		      ;; 6. Utilizes
+		      exec-path-from-shell
+		      reveal-in-osx-finder
+		      websocket
+		      request
+		      magit
+		      ztree) )
 ;;
 (setq package-selected-packages my/packages)
 
