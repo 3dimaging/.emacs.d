@@ -52,5 +52,6 @@
 (require 'init-org)
 (require 'init-edit)
 (require 'init-company)
+(require 'init-helm)
 ;; (require 'init-cpp)
 
